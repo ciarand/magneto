@@ -6,9 +6,16 @@
       with_items:
         - https://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
         - docker-io
+        - python-docker-py
+        - lxc
 
     - name: start the docker service
       service: name=docker state=started
 
     - name: set docker to start at boot
+      changed_when: false
       command: chkconfig docker on
+
+  handlers:
+    - name: restart docker
+      service: name=docker state=restarted
