@@ -4,6 +4,14 @@ Magneto
 [quote]
 Docker on CentOS (7.0 x64) on DigitalOcean using Ansible
 
+Status
+------
+Pretty much done for now. It's an incredibly basic setup, but it does start and
+setup Docker mostly correctly. Unfortunately the stuff I want to play with
+doesn't play well with the version of Docker included in EPEL beta/7 (v1.0).
+
+Also dealing with SELinux makes me unhappy.
+
 License
 -------
 Licensed under the Simplified BSD license. If you've never seen one before,
