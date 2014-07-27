@@ -1,0 +1,14 @@
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: install docker
+      yum: name={{ item }} state=present
+      with_items:
+        - https://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+        - docker-io
+
+    - name: start the docker service
+      service: name=docker state=started
+
+    - name: set docker to start at boot
+      command: chkconfig docker on
