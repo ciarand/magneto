@@ -1,0 +1,10 @@
+Magneto
+=======
+
+[quote]
+Docker on CentOS (7.0 x64) on DigitalOcean using Ansible
+
+License
+-------
+Licensed under the Simplified BSD license. If you've never seen one before,
+check the `LICENSE` file.
